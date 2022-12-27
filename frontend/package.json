@@ -1,0 +1,42 @@
+{
+	"name": "blog-main",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync",
+		"check": "svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./jsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.7.1",
+		"svelte-fa": "^3.0.3",
+		"svelte-quill": "^1.2.0",
+		"typescript": "^4.7.4",
+		"vite": "^3.0.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@fortawesome/free-solid-svg-icons": "^6.1.2",
+		"@lucia-auth/sveltekit": "^0.5.1",
+		"@tinymce/tinymce-svelte": "^1.0.0",
+		"@tiptap/core": "^2.0.0-beta.182",
+		"@tiptap/starter-kit": "^2.0.0-beta.191",
+		"axios": "^0.27.2",
+		"dayjs": "^1.11.4",
+		"lucia-auth": "^0.3.4",
+		"node-sass": "^7.0.1",
+		"quill-image-drop-and-paste": "^1.2.12",
+		"quill-image-drop-and-paste-zoi": "^1.0.4",
+		"quill-image-uploader": "^1.2.3",
+		"svelte-preprocess": "^4.10.7",
+		"svelte-quill": "^1.2.0",
+		"tailwind-editor": "^0.1.62",
+		"tailwindcss": "^3.1.8"
+	}
+}
