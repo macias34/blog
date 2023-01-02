@@ -1,4 +1,5 @@
-//S TODO : Zrób weryfikacje po stronie frontendu dotyczącą logowania
+//S TODO : W api thumbnails stwórz widok dla pojedynczego thumbnaila
+
 
 
 

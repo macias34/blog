@@ -42,3 +42,6 @@ _actual.*
 _output
 /types
 .eslintcache
+README.md
+prisma
+backend
