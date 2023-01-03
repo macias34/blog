@@ -1,11 +1,9 @@
-import { error } from "@sveltejs/kit";
 import { proccessFile, saveFile } from "$lib/Server/files";
+import { calculateAspectRatioFit } from "$lib/Helpers/AdminTools";
+import { error } from "@sveltejs/kit";
 import { prisma } from "$lib/Server/prisma";
 import path from "path";
-import { promisify } from "util";
-import sizeOf from "image-size";
-
-const getDimensions = promisify(sizeOf);
+import sharp from "sharp";
 
 const imagesPath = ".././post_imgs/";
 
@@ -27,17 +25,20 @@ export async function POST({ request }) {
     if (duplicated) return new Response(JSON.stringify(duplicated));
 
     await saveFile(filePath, fileBase64);
-    // const dimensions = await getDimensions(filePath);
-
-    // const height = dimensions.height;
-    // const width = dimensions.width;
+    const imageMetaData = await sharp(filePath).metadata();
+    const dimensions = calculateAspectRatioFit(
+      imageMetaData.width,
+      imageMetaData.height,
+      512,
+      512
+    );
 
     const image = await prisma.img.create({
       data: {
         url: fileSrc,
         file_name: fileName,
-        height: 700,
-        width: 350,
+        height: Math.floor(dimensions.height),
+        width: Math.floor(dimensions.width),
       },
     });
 
