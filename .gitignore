@@ -45,3 +45,5 @@ _output
 README.md
 prisma
 backend
+thumbnails/*
+post_imgs/*
