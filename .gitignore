@@ -45,5 +45,5 @@ _output
 README.md
 prisma
 backend
-thumbnails/*
-post_imgs/*
+!thumbnails/.gitkeep
+!post_imgs/.gitkeep
