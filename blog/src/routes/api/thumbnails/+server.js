@@ -1,10 +1,12 @@
 import { error } from "@sveltejs/kit";
 import { proccessFile, saveFile } from "$lib/Server/files";
 import { prisma } from "$lib/Server/prisma";
+import { authController } from "$lib/Server/user.model";
 
 const thumbnailsPath = ".././thumbnails/";
 
-export const POST = async ({ request }) => {
+export const POST = async ({ request, locals }) => {
+  authController(locals);
   try {
     const { fileName, fileBase64, fileSrc } = await proccessFile(
       request,

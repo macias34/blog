@@ -1,5 +1,5 @@
 <header>
-  <a href="./admin/posts">
+  <a href="./admin/">
     <i class="fa-solid fa-lock" />
   </a>
 </header>

@@ -1,8 +1,10 @@
 import { error } from "@sveltejs/kit";
-import { sanitizePostUrl } from "$lib/Server/sanitize";
 import { prisma } from "$lib/Server/prisma";
+import jwt from "jsonwebtoken";
+import { JWT_ACCESS_SECRET } from "$env/static/private";
+import { authController } from "$lib/Server/user.model";
 
-export const GET = async () => {
+export const GET = async ({ request, locals }) => {
   try {
     const categories = await prisma.category.findMany({
       include: {
@@ -17,7 +19,8 @@ export const GET = async () => {
   }
 };
 
-export const POST = async ({ request }) => {
+export const POST = async ({ request, locals }) => {
+  authController(locals);
   try {
     const body = await request.json();
     const { label, color } = body;

@@ -4,10 +4,12 @@ import { error } from "@sveltejs/kit";
 import { prisma } from "$lib/Server/prisma";
 import path from "path";
 import sharp from "sharp";
+import { authController } from "$lib/Server/user.model";
 
 const imagesPath = ".././post_imgs/";
 
-export async function POST({ request }) {
+export async function POST({ request, locals }) {
+  authController(locals);
   try {
     const { fileName, fileBase64, fileSrc } = await proccessFile(
       request,

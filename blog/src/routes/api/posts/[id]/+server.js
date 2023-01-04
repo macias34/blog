@@ -1,6 +1,7 @@
 import { error } from "@sveltejs/kit";
 import { sanitizePostUrl } from "$lib/Server/sanitize";
 import { prisma } from "$lib/Server/prisma";
+import { authController } from "$lib/Server/user.model";
 
 export const GET = async ({ params }) => {
   const post_id = parseInt(params.id);
@@ -23,7 +24,8 @@ export const GET = async ({ params }) => {
   }
 };
 
-export const PUT = async ({ request, params }) => {
+export const PUT = async ({ request, params, locals }) => {
+  authController(locals);
   try {
     const body = await request.json();
     let { title, description, thumbnail_id, categories } = body;
@@ -59,7 +61,8 @@ export const PUT = async ({ request, params }) => {
   }
 };
 
-export const DELETE = async ({ params }) => {
+export const DELETE = async ({ params, locals }) => {
+  authController(locals);
   const post_id = parseInt(params.id);
 
   try {

@@ -15,10 +15,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #111;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
-
+    color: white;
     .code {
       font-size: 5rem;
       font-weight: 200;

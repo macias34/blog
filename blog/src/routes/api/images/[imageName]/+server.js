@@ -1,7 +1,7 @@
 import { prisma } from "$lib/Server/prisma";
+import { authController } from "$lib/Server/user.model";
 import { error } from "@sveltejs/kit";
 import fs from "fs";
-
 const imagesPath = ".././post_imgs/";
 
 export const GET = async ({ params }) => {
@@ -15,7 +15,8 @@ export const GET = async ({ params }) => {
   }
 };
 
-export const DELETE = async ({ params }) => {
+export const DELETE = async ({ params, locals }) => {
+  authController(locals);
   try {
     const fileName = params.imageName;
     await prisma.img.delete({

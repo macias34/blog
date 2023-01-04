@@ -1,13 +1,11 @@
 <script>
   import PostGrid from "$lib/Post/PostGrid.svelte";
-  import Header from "$lib/UI/Header.svelte";
 
   export let data = {};
   let posts = data.posts;
 </script>
 
 <div class="home__page">
-  <Header />
   <PostGrid {posts} />
 </div>
 

@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit";
 import { sanitizePostUrl } from "$lib/Server/sanitize";
 import { prisma } from "$lib/Server/prisma";
-
+import { authController } from "$lib/Server/user.model";
 export const GET = async () => {
   try {
     const posts = await prisma.post.findMany({
@@ -18,7 +18,8 @@ export const GET = async () => {
   }
 };
 
-export const POST = async ({ request }) => {
+export const POST = async ({ request, locals }) => {
+  authController(locals);
   try {
     const body = await request.json();
     let { title, description, thumbnail_id, categories } = body;

@@ -1,6 +1,6 @@
 <nav>
   <div class="admin__controls">
-    <a href="/admin/posts" class="admin__control">
+    <a href="/admin/" class="admin__control">
       <i class="fa-regular fa-clone" />
     </a>
     <a href="/admin/categories" class="admin__control">

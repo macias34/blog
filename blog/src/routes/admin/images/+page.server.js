@@ -1,6 +1,13 @@
 import { error } from "@sveltejs/kit";
 
-export async function load({ fetch }) {
+export async function load({ fetch, locals }) {
+  const user = locals.user;
+
+  if (!user) {
+    throw error(401, {
+      message: "You must be logged in to view this page",
+    });
+  }
   const url = `/api/images`;
   const response = await fetch(url);
   const imgs = await response.json();
@@ -8,6 +15,7 @@ export async function load({ fetch }) {
   if (response.ok) {
     return {
       imgs,
+      user,
     };
   }
 
