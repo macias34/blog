@@ -3,7 +3,7 @@ import { proccessFile, saveFile } from "$lib/Server/files";
 import { prisma } from "$lib/Server/prisma";
 import { authController } from "$lib/Server/user.model";
 
-const thumbnailsPath = ".././thumbnails/";
+const thumbnailsPath = "./uploads/thumbnails/";
 
 export const POST = async ({ request, locals }) => {
   authController(locals);
