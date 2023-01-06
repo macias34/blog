@@ -42,8 +42,6 @@ _actual.*
 _output
 /types
 .eslintcache
-README.md
+Cheatsheet.md
 prisma
 backend
-thumbnails
-post_imgs
