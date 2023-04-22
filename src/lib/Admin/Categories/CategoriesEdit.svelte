@@ -54,7 +54,7 @@
 
 <div class="categories__form">
   <form on:submit|preventDefault={updateCategory}>
-    <h1>Edytuj kategorie</h1>
+    <h1>Edit the category</h1>
 
     <Input placeholder="Label of the category" bind:value={label} width={85} />
     <!-- <Input type={"textarea"} placeholder="Description" bind:value={description} /> -->
@@ -62,7 +62,7 @@
       <input class="color" type="color" bind:value={color} />
     </div>
 
-    <Button type={"submit"}>Edytuj kategorie</Button>
+    <Button type={"submit"}>Submit</Button>
   </form>
 </div>
 

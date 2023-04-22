@@ -116,7 +116,7 @@
         {#if title.length > 0}
           {title}
         {:else}
-          Aktualizuj post
+          Update
         {/if}
       </h1>
 
