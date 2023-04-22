@@ -48,8 +48,8 @@
 
 <Popup
   bind:showPopup
-  title="Nie wypełniłeś wszystkich pól."
-  message="Spróbuj ponownie ..."
+  title="You haven't filled all fields."
+  message="Please try again ..."
 />
 
 <div class="categories__form">
@@ -62,7 +62,7 @@
       <input class="color" type="color" bind:value={color} />
     </div>
 
-    <Button type={"submit"}>Submit</Button>
+    <Button type={"submit"}>Update</Button>
   </form>
 </div>
 

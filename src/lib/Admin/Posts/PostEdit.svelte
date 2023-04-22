@@ -105,8 +105,8 @@
 
 <Popup
   bind:showPopup
-  title="Nie wypełniłeś wszystkich pól."
-  message="Spróbuj ponownie ..."
+  title="You haven't filled all fields."
+  message="Please try again ..."
 />
 
 {#if showEdit}
@@ -158,7 +158,7 @@
         />
       </div>
 
-      <Button type={"submit"}>Aktualizuj post</Button>
+      <Button type={"submit"}>Update</Button>
     </form>
   </div>
 

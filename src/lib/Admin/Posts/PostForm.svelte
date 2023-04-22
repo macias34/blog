@@ -104,8 +104,8 @@
 
 <Popup
   bind:showPopup
-  title="Nie wypełniłeś wszystkich pól."
-  message="Spróbuj ponownie ..."
+  title="You haven't filled all fields."
+  message="Please try again ..."
 />
 
 {#if showForm}
