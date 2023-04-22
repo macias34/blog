@@ -1,17 +1,17 @@
 <script>
   import { isFormEmpty } from "$lib/Helpers/formValidation";
   import { createEventDispatcher } from "svelte";
-  import { PUT } from "$lib/Helpers/Requests";
+  import { POST } from "$lib/Helpers/Requests";
   import Input from "$lib/UI/Input.svelte";
   import Button from "$lib/UI/Button.svelte";
   import Popup from "$lib/UI/Popup.svelte";
 
   const dispatch = createEventDispatcher();
 
-  export let editData;
   export let showForm = false;
+  let label = "";
+  let color = "";
   let showPopup = false;
-  let { category_id, label, color, posts } = editData;
 
   const toggleForm = () => {
     showForm = !showForm;
@@ -22,25 +22,37 @@
     color = "";
   };
 
-  const updateGrid = (id) => {
+  const addToGrid = (id) => {
     const categoryData = {
       category_id: id,
       label,
       color,
-      posts,
     };
-    dispatch("updateGrid", categoryData);
+    dispatch("addToGrid", categoryData);
   };
 
-  async function updateCategory() {
+  async function addCategory() {
+    let id;
     const formFields = [label, color];
 
     if (isFormEmpty(formFields)) {
       showPopup = true;
+
       return;
     }
+    const post = {
+      label,
+      color,
+    };
 
-    updateGrid(category_id);
+    const url = "/api/categories";
+    const res = await POST(url, post)
+      .then((res) => res.json())
+      .then((res) => {
+        id = res.category_id;
+      });
+
+    addToGrid(id);
     clearForm();
     showForm = false;
   }
@@ -53,16 +65,15 @@
 />
 
 <div class="categories__form">
-  <form on:submit|preventDefault={updateCategory}>
-    <h1>Edytuj kategorie</h1>
+  <form on:submit|preventDefault={addCategory}>
+    <h1>Add a new category</h1>
 
-    <Input placeholder="Tytuł kategorii" bind:value={label} width={85} />
-    <!-- <Input type={"textarea"} placeholder="Description" bind:value={description} /> -->
+    <Input placeholder="Label of the category" bind:value={label} width={85} />
     <div class="form__color">
       <input class="color" type="color" bind:value={color} />
     </div>
 
-    <Button type={"submit"}>Edytuj kategorie</Button>
+    <Button type={"submit"}>Submit</Button>
   </form>
 </div>
 

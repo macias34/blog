@@ -35,7 +35,10 @@
   </div>
 </div>
 
-<div class="post__readingTime">{time} minuty czytania</div>
+<div class="post__readingTime">
+  {time}
+  {time !== 1 ? "minutes" : "minute"} to read
+</div>
 
 <style lang="scss">
   .post__header {

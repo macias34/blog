@@ -24,8 +24,8 @@
 </script>
 
 <div class="posts__caption">
-  <div class="posts__caption_normal">Zobacz ostatnio</div>
-  <div class="posts__caption_bold">Dodane posty</div>
+  <div class="posts__caption_normal">Checkout</div>
+  <div class="posts__caption_bold">Latest posts</div>
 </div>
 
 <div class="posts">

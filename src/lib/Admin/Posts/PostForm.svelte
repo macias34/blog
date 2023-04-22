@@ -115,7 +115,7 @@
         {#if title.length > 0}
           {title}
         {:else}
-          Dodaj post
+          Add a new post
         {/if}
       </h1>
 
@@ -152,7 +152,7 @@
         <Editor on:text-change={handleEditorChange} bind:description />
       </div>
 
-      <Button type={"submit"}>Dodaj post</Button>
+      <Button type={"submit"}>Submit</Button>
     </form>
   </div>
 

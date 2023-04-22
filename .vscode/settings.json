@@ -1,0 +1,76 @@
+{
+    "hidefiles.configurationType": "local",
+    "hidefiles.globalConfig": {
+        "profiles": [
+            {
+                "hidden": [
+                    "package.json",
+                    "package-lock.json",
+                    "node_modules/",
+                    "frontend/vite.config.js",
+                    "frontend/svelte.config.js",
+                    "frontend/README.md",
+                    "frontend/package.json",
+                    "frontend/package-lock.json",
+                    "frontend/jsconfig.json",
+                    "frontend/.npmrc",
+                    "uploads/",
+                    "frontend/static/",
+                    "frontend/.gitignore",
+                    "frontend/src/app.html",
+                    "frontend/src/app.d.ts",
+                    "frontend/node_modules/",
+                    "frontend/.svelte-kit/",
+                    ".vscode/",
+                    "backend/node_modules/",
+                    "backend/.gitignore",
+                    "backend/package-lock.json",
+                    "backend/package.json",
+                    "blog/static/",
+                    "blog/.gitignore",
+                    "blog/.npmrc",
+                    "blog/jsconfig.json",
+                    "blog/package-lock.json",
+                    "blog/package.json",
+                    "blog/svelte.config.js",
+                    "blog/vite.config.js",
+                    "blog/README.md",
+                    "blog/src/app.html",
+                    "blog/src/app.d.ts",
+                    "blog/src/app.html",
+                    "blog/node_modules/",
+                    "blog/.svelte-kit/",
+                    "blog/src/app.html",
+                    "blog/src/app.html"
+                ],
+                "name": "Blog",
+                "description": "",
+                "detail": "",
+                "peek": []
+            },
+            {
+                "name": "Default",
+                "detail": "",
+                "description": "Test",
+                "hidden": [
+                    ".vscode/"
+                ]
+            },
+            {
+                "name": "Strict",
+                "detail": "Hide everything not immediately required",
+                "hidden": [
+                    "$Default"
+                ]
+            }
+        ]
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "hidefiles.selectedProfile": "Show All Files"
+}
