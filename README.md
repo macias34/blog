@@ -1,38 +1,82 @@
-# create-svelte
+# 🏆 Chess blog
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Preview links :
+- [🏠 Home page](https://blog-propiesek.vercel.app/)
+- [📝 Post page](https://blog-propiesek.vercel.app/ding-vs-nepomniachtchi---game-1)
 
-## Creating a project
+# Table of Contents
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [❓ About the app](#❓-about-the-app)
+  - [🚀 Features](#🚀-features)
+- [💡 Motivation](#💡-motivation)
+- [💻 Technology stack](#💻-technology-stack)
+- [📷 Screenshots](#📷-screenshots)
+  - [🏠 Home page](#🏠-home-page)
+  - [📝 Post page](#📝-post-page)
+    - [🧾 Post header](#🧾-post-header)
+    - [📄 Post content](#📄-post-content)
+  - [👨‍💼 Admin dashboard](#👨‍💼-admin-dashboard)
+    - [📝 Posts panel](#📝-posts-panel)
+    - [🆕 Post creation](#🆕-post-creation)
+    - [🗃️ Categories panel](#🗃️-categories-panel)
+    - [➕ Categories creation](#➕-categories-creation)
+    - [🖼️ Images panel](#🖼️-images-panel)
+- [📧 Contact](#📧-contact)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+# ❓ About the app
+This was my first ever CRUD project. It's a simple blog, with admin-only management.
 
-## Developing
+## 🚀 Features
+- managing categories
+- managing posts (with categories if you want to) using WYSIWYG editor
+- displaying posts preview on the home page
+- displaying single post
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+# 💡 Motivation
+My motivation was to create a blog, where I can post chess content as it's my hobby.
 
-```bash
-npm run dev
+# 💻 Technology stack
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- [SvelteKit](https://kit.svelte.dev/) - For front-end and back-end
+- [SASS](https://sass-lang.com/) - For styling
+- [Quill](https://quilljs.com/) - For WYSIWYG editor
+- [Prisma](https://www.prisma.io/) - As a ORM for database
+- [PlanetScale](https://planetscale.com/)- As the database
+- [supabase](https://supabase.com/) - As the storage
+- [JWT](https://jwt.io/) - For auth
+- [Vercel](https://vercel.com/) - For deployment
 
-## Building
+# 📷 Screenshots
 
-To create a production version of your app:
+## 🏠 Home page
+![Home page](documentation_imgs/home.png)
 
-```bash
-npm run build
-```
+## 📝 Post page
 
-You can preview the production build with `npm run preview`.
+### 🧾 Post header
+![Post header](documentation_imgs/post-header.png)
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### 📄 Post content
+![Post content](documentation_imgs/post-content.png)
+
+## 👨‍💼 Admin dashboard
+
+### 📝 Posts panel
+![Posts panel](documentation_imgs/posts-panel.png)
+
+### 🆕 Post creation
+![Post creation](documentation_imgs/post-creation.png)
+
+### 🗃️ Categories panel
+![Categories panel](documentation_imgs/categories-panel.png)
+
+### ➕ Categories creation
+![Categories creation](documentation_imgs/category-creation.png)
+
+### 🖼️ Images panel
+![Images panel](documentation_imgs/images-panel.png)
+
+
+# 📧 Contact
+Feel free to contact me, message me on Discord @macias#9277 😄🙏.
