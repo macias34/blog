@@ -20,6 +20,7 @@
 </div>
 
 <style lang="scss">
+  @import "../../scss/media_queries";
   .post__categories {
     width: 100%;
     margin-bottom: 1vh;
@@ -40,6 +41,12 @@
       font-size: 1.35rem;
       font-weight: 500;
       cursor: pointer;
+
+      @include landscapePhone {
+        font-size: 1rem;
+        border: 1px solid;
+        padding: 1rem;
+      }
     }
   }
 </style>

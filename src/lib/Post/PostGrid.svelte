@@ -24,8 +24,8 @@
 </script>
 
 <div class="posts__caption">
-  <div class="posts__caption_normal">Checkout</div>
-  <div class="posts__caption_bold">Latest posts</div>
+  <span class="posts__caption_normal">Checkout</span>
+  <span class="posts__caption_bold">Latest posts</span>
 </div>
 
 <div class="posts">
@@ -42,8 +42,11 @@
     flex-direction: column;
     padding: 3vh 0;
     color: white;
-    div {
-      font-size: 6rem;
+    font-size: 6rem;
+
+    @include portrait {
+      align-items: center;
+      font-size: 4.5rem;
     }
 
     .posts__caption_normal {

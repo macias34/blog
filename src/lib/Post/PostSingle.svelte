@@ -30,10 +30,6 @@
     description.replace(/<\/?[^>]+(>|$)/g, "")
   );
 
-  const formatDate = (date) => {
-    return dayjs(date).format("MMMM DD, YYYY HH:mm");
-  };
-
   const dispatch = createEventDispatcher();
 
   function deletePost() {
@@ -70,6 +66,11 @@
     flex-direction: column;
     justify-content: flex-end;
     margin: 2vh 0;
+
+    @include phone {
+      width: 100%;
+    }
+
     .post__thumbnail {
       height: 80vh;
       background-color: greenyellow;

@@ -10,8 +10,12 @@
 </div>
 
 <style lang="scss">
+  @import "../scss/media_queries";
   .home__page {
     padding: 0 10vh;
     background-color: #111;
+    @include phone {
+      padding: 0 5vh;
+    }
   }
 </style>
